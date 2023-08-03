@@ -126,5 +126,6 @@ f=1
 if(i==2){
   turn_p.innerHTML="it's your turn mr X"
 f=0
+i=0
 }
 })
