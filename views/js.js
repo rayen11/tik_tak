@@ -1,4 +1,4 @@
-var socket = io.connect("http://localhost:3000/");
+var socket = io.connect("https://tik-tak.onrender.com");
 const container = document.querySelector(".cont");
 const x = document.querySelectorAll("button");
 const table = document.querySelector("table");
