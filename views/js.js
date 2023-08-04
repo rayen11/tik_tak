@@ -1,4 +1,4 @@
-var socket = io.connect("https://tik-tak.onrender.com/");
+var socket = io.connect("http://localhost:3000/");
 const container = document.querySelector(".cont");
 const x = document.querySelectorAll("button");
 const table = document.querySelector("table");
@@ -11,6 +11,7 @@ var f = 0;
 const score = document.querySelector(".score");
 var test=0
 var i=0
+
 function xxx() {
   if (player == 0) {
     player = 1;
@@ -38,6 +39,16 @@ container.addEventListener("click", (eo) => {
     socket.emit("new", eo.target.id);
   }
 });
+
+
+socket.on("mes", (data) => {
+  console.log(data)
+  turn_p.innerHTML=data
+})
+
+
+
+
 socket.on("new1", (hh) => {
   x[hh - 1].innerHTML = xxx();
 
@@ -129,3 +140,6 @@ f=0
 i=0
 }
 })
+
+
+
